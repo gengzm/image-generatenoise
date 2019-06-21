@@ -119,8 +119,12 @@ void copy()
 
 void c3toc1()
 {
-    
+    //cv::Mat mat2 = cv::imread("C:/Temp/calibration/boundary.bmp", CV_LOAD_IMAGE_GRAYSCALE);
+    //cv::imwrite("C:/Temp/calibration/boundary-gray.bmp", mat2);
+}
 
+void genpepper()
+{
     for (int i = 0; i < 20; i++)
     {
         cv::Mat mat = cv::Mat(4000, 4000, CV_8UC3, cv::Scalar(255, 255, 255));
@@ -135,14 +139,10 @@ void c3toc1()
         cv::imwrite(str, noise);
         std::cout << (str) << std::endl;
     }
-
-
-    //cv::Mat mat2 = cv::imread("C:/Temp/calibration/boundary.bmp", CV_LOAD_IMAGE_GRAYSCALE);
-    //cv::imwrite("C:/Temp/calibration/boundary-gray.bmp", mat2);
 }
 
 int main ()
 {
-    c3toc1();
+    genpepper();
     return 0;
 }
